@@ -21,9 +21,9 @@ class Human
             @guess = input_guess.split(//)
             break if guess[0] == 'q'
             show_code(guess)
-            break if solved?(code, guess)
             compare(code, guess)
             show_clue(exact, same)
+            break if solved?(code, guess)
         end
         special_message(turn)
     end
